@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Style Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="profile-bar">
+    <img id="profile-pic" src="https://www.gravatar.com/avatar/?d=identicon" alt="Profile" />
+    <div id="profile-name"></div>
+    <input type="text" id="profile-input" placeholder="Enter your name" />
+    <button id="login-btn">Login</button>
+  </div>
+  <div class="chat-container">
+    <div class="users-list">
+      <h3>Online Users</h3>
+      <ul id="users"></ul>
+    </div>
+    <div class="chat-window">
+      <div id="chat-messages"></div>
+      <div id="typing-indicator"></div>
+      <form id="message-form">
+        <input type="file" id="media-upload" style="display:none;" accept="image/*,video/*" />
+        <button type="button" id="media-btn">📎</button>
+        <input type="text" id="message-input" placeholder="Type a message" autocomplete="off" />
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
